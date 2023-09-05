@@ -525,6 +525,7 @@ footer {
 
     #menu {
         display: inline-block;
+        color: var(--secondary);
     }
 
     .navbar .navbar-container .navbar-menu {
@@ -537,7 +538,7 @@ footer {
         background-color: #fffcfb;
         z-index: -1;
         margin-top: 2px;
-        box-shadow: 0px 6px 12px 0px #dadada;
+        box-shadow: 0px 2px 12px 0px #dadada;
         gap: 8px;
         transition: 0.3s;
     }
