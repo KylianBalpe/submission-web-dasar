@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 :root {
     --bs-body-font-family: 'Quicksand', sans-serif;
     --primary: #fe7b2a;
     --secondary: #4A2708;
     --bg-color: #FFFCFA;
     --yellow: #FBBC0B;
+    --bg-color-secondary: #fff7f0;
 }
 
 * {
@@ -14,10 +17,12 @@
     text-decoration: none;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    background-color: transparent;
 }
 
 body {
     color: var(--secondary);
+    background-color: var(--bg-color);
 }
 
 .container {
@@ -33,7 +38,7 @@ body {
 #about,
 #page-top,
 #service,
-#galery footer {
+#galery {
     padding-top: 86px;
 }
 
@@ -82,6 +87,7 @@ section .container img {
 .navbar .navbar-nav .navbar-menu {
     display: flex;
     gap: 32px;
+    list-style: none;
 }
 
 .navbar .navbar-nav .navbar-menu .navbar-item {
@@ -110,6 +116,11 @@ h1 {
 h2 {
     font-weight: 400;
     font-size: 36px;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 24px;
 }
 
 .fw-normal {
@@ -211,23 +222,49 @@ i {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 48px;
+    gap: 32px;
 }
 
-.footer-content {
+.section-title {
     display: flex;
-    align-items: flex-start;
-    gap: 49px;
-}
-
-.location,
-.contacat,
-.layanan {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 16px;
+    font-size: 36px;
 }
+
+.section-title i {
+    color: var(--primary);
+}
+
+.petshop-display,
+.grooming-display {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.galeri-display {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#galery .container.galeri .galeri-display img {
+    width: 300px;
+}
+
+#service .container.petshop .petshop-product img,
+#service .container.grooming .petshop-grooming img {
+    width: 389px;
+}
+
+section .container img {
+    width: 448px;
+}
+
 
 .petshop-product,
 .petshop-grooming {
@@ -235,24 +272,69 @@ i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
+}
+
+.petshop-product h3.fw-semibold {
+    color: var(--primary);
 }
 
 .petshop-product img {
     width: 389px !important;
 }
 
-footer span {
+.footer {
+    background-color: var(--secondary);
     display: flex;
-    padding: 12px 0px;
     justify-content: center;
     align-items: center;
+    padding: 16px 0px;
+}
+
+.footer span {
     background-color: var(--secondary);
     color: #FFF;
+    text-align: center;
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+}
+
+.footer-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+footer {
+    background-color: var(--bg-color-secondary);
+}
+
+.footer-content ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 8px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.footer-content .location ul {
+    max-width: 726px;
+}
+
+.location,
+.contact,
+.layanan {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
 }
 
 /* Container & Img Responsive */
@@ -269,6 +351,20 @@ footer span {
 
     section#about .container {
         gap: 64px;
+    }
+
+
+    #service .container.petshop .petshop-product img,
+    #service .container.grooming .petshop-grooming img {
+        width: 296px !important;
+    }
+
+    #galery .container.galeri .galeri-display img {
+        width: 221px !important;
+    }
+
+    .footer-content .location ul {
+        max-width: 486px;
     }
 }
 
@@ -289,6 +385,19 @@ footer span {
 
     section#about .container {
         gap: 32px;
+    }
+
+    #service .container.petshop .petshop-product img,
+    #service .container.grooming .petshop-grooming img {
+        width: 236px !important;
+    }
+
+    #galery .container.galeri .galeri-display img {
+        width: 176px !important;
+    }
+
+    .footer-content .location ul {
+        max-width: 426px;
     }
 }
 
@@ -311,6 +420,15 @@ footer span {
         gap: 24px;
     }
 
+    #service .container.petshop .petshop-product img,
+    #service .container.grooming .petshop-grooming img {
+        width: 176px !important;
+    }
+
+    #galery .container.galeri .galeri-display img {
+        width: 138px !important;
+    }
+
     #page-top .container .articleHead {
         align-items: center;
         justify-content: center;
@@ -330,6 +448,20 @@ footer span {
         align-items: center;
         text-align: center;
     }
+
+    .footer-content,
+    .location,
+    .contact,
+    .layanan {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 16px;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -339,6 +471,34 @@ footer span {
 
     .articleHead {
         gap: calc(0.64 * 24px);
+    }
+
+    #service .container.petshop .petshop-product img,
+    #service .container.grooming .petshop-grooming img {
+        width: 256px !important;
+    }
+
+    #galery .container.galeri .galeri-display img {
+        width: 256px !important;
+    }
+
+    .petshop-display,
+    .grooming-display {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .galeri-display {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+        text-align: center;
     }
 }
 
@@ -385,11 +545,18 @@ footer span {
         font-size: calc(0.90 * 48px);
     }
 
-    h2 {
+    h2,
+    .location h2,
+    .contact h2,
+    .layanan h2,
+    .section-title {
         font-size: calc(0.90 * 36px);
     }
 
-    .navbar .navbar-nav .navbar-menu .navbar-item {
+    .navbar .navbar-nav .navbar-menu .navbar-item,
+    .location ul,
+    .contact ul,
+    .layanan ul {
         font-size: calc(0.90 * 24px);
     }
 
@@ -398,7 +565,7 @@ footer span {
         border-radius: calc(0.90 * 42px);
     }
 
-    footer span {
+    .footer span {
         font-size: calc(0.90 * 24px);
     }
 }
@@ -420,11 +587,18 @@ footer span {
         font-size: calc(0.82 * 48px);
     }
 
-    h2 {
+    h2,
+    .location h2,
+    .contact h2,
+    .layanan h2,
+    .section-title {
         font-size: calc(0.82 * 36px);
     }
 
-    .navbar .navbar-nav .navbar-menu .navbar-item {
+    .navbar .navbar-nav .navbar-menu .navbar-item,
+    .location ul,
+    .contact ul,
+    .layanan ul {
         font-size: calc(0.82 * 24px);
     }
 
@@ -433,7 +607,7 @@ footer span {
         border-radius: calc(0.82 * 42px);
     }
 
-    footer span {
+    .footer span {
         font-size: calc(0.82 * 24px);
     }
 }
@@ -455,11 +629,18 @@ footer span {
         font-size: calc(0.75 * 48px);
     }
 
-    h2 {
+    h2,
+    .location h2,
+    .contact h2,
+    .layanan h2,
+    .section-title {
         font-size: calc(0.75 * 36px);
     }
 
-    .navbar .navbar-nav .navbar-menu .navbar-item {
+    .navbar .navbar-nav .navbar-menu .navbar-item,
+    .location ul,
+    .contact ul,
+    .layanan ul {
         font-size: calc(0.75 * 24px);
     }
 
@@ -468,7 +649,7 @@ footer span {
         border-radius: calc(0.75 * 42px);
     }
 
-    footer span {
+    .footer span {
         font-size: calc(0.75 * 24px);
     }
 }
@@ -490,11 +671,18 @@ footer span {
         font-size: calc(0.64 * 48px);
     }
 
-    h2 {
+    h2,
+    .location h2,
+    .contact h2,
+    .layanan h2,
+    .section-title {
         font-size: calc(0.64 * 36px);
     }
 
-    .navbar .navbar-nav .navbar-menu .navbar-item {
+    .navbar .navbar-nav .navbar-menu .navbar-item,
+    .location ul,
+    .contact ul,
+    .layanan ul {
         font-size: calc(0.64 * 24px);
     }
 
@@ -503,7 +691,7 @@ footer span {
         border-radius: calc(0.64 * 42px);
     }
 
-    footer span {
+    .footer span {
         font-size: calc(0.64 * 24px);
     }
 }
