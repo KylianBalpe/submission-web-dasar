@@ -50,46 +50,48 @@ section .container img {
     width: 448px;
 }
 
-.navbar {
-    display: inline-flex;
+header {
+    display: flex;
     padding: 12px 0px;
     align-items: center;
     border-bottom: 2px solid var(--primary);
     background-color: var(--bg-color);
     position: fixed;
-    justify-content: center;
+    justify-content: space-between;
     top: 0;
     left: 0;
     right: 0;
     z-index: 9999;
 }
 
-.navbar .navbar-container {
-    display: flex;
-    width: 1440px;
-    justify-content: space-between;
-    align-items: center;
+header .container {
     padding: 0 12px;
+    width: 1440px;
 }
 
-.navbar .navbar-container .navbar-brand {
+nav.navbar {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
     font-size: 48px;
     display: flex;
     align-items: flex-start;
     color: var(--primary);
 }
 
-.navbar .navbar-container .navbar-brand:hover {
+.brand:hover {
     color: var(--yellow);
 }
 
-.navbar .navbar-container .navbar-menu {
+.navbar .navbar-menu {
     display: flex;
     gap: 32px;
     list-style: none;
 }
 
-.navbar .navbar-container .navbar-menu .navbar-item {
+.navbar .navbar-menu .navbar-item {
     display: flex;
     padding: 8px 0px;
     justify-content: center;
@@ -103,7 +105,7 @@ section .container img {
     transition: color 0.15s ease-in-out;
 }
 
-.navbar .navbar-container .navbar-menu .navbar-item:hover {
+.navbar .navbar-menu .navbar-item:hover {
     color: var(--yellow);
 }
 
@@ -507,19 +509,19 @@ footer {
 
 /* Navbar Responsive */
 @media screen and (max-width: 1440px) {
-    .navbar .navbar-container {
+    header .container {
         max-width: 1024px;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .navbar .navbar-container {
+    header .container {
         max-width: 824px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .navbar .navbar-container {
+    header .container {
         max-width: 628px;
     }
 
@@ -528,7 +530,7 @@ footer {
         color: var(--secondary);
     }
 
-    .navbar .navbar-container .navbar-menu {
+    header .container .navbar-menu {
         display: none;
         flex-direction: column;
         width: 100%;
@@ -545,7 +547,7 @@ footer {
 }
 
 @media screen and (max-width: 450px) {
-    .navbar .navbar-container {
+    header .container {
         max-width: 420px;
     }
 }
@@ -564,7 +566,7 @@ footer {
     }
 
     h1,
-    .navbar .navbar-container .navbar-brand {
+    .brand {
         font-size: calc(0.90 * 48px);
     }
 
@@ -576,7 +578,7 @@ footer {
         font-size: calc(0.90 * 36px);
     }
 
-    .navbar .navbar-container .navbar-menu .navbar-item,
+    .navbar .navbar-menu .navbar-item,
     .location ul,
     .contact ul,
     .layanan ul {
@@ -606,7 +608,7 @@ footer {
     }
 
     h1,
-    .navbar .navbar-container .navbar-brand {
+    .brand {
         font-size: calc(0.82 * 48px);
     }
 
@@ -618,7 +620,7 @@ footer {
         font-size: calc(0.82 * 36px);
     }
 
-    .navbar .navbar-container .navbar-menu .navbar-item,
+    .navbar .navbar-menu .navbar-item,
     .location ul,
     .contact ul,
     .layanan ul {
@@ -648,7 +650,7 @@ footer {
     }
 
     h1,
-    .navbar .navbar-container .navbar-brand {
+    .brand {
         font-size: calc(0.75 * 48px);
     }
 
@@ -660,7 +662,7 @@ footer {
         font-size: calc(0.75 * 36px);
     }
 
-    .navbar .navbar-container .navbar-menu .navbar-item,
+    .navbar .navbar-menu .navbar-item,
     .location ul,
     .contact ul,
     .layanan ul {
@@ -690,7 +692,7 @@ footer {
     }
 
     h1,
-    .navbar .navbar-container .navbar-brand {
+    .brand {
         font-size: calc(0.64 * 48px);
     }
 
@@ -702,7 +704,7 @@ footer {
         font-size: calc(0.64 * 36px);
     }
 
-    .navbar .navbar-container .navbar-menu .navbar-item,
+    .navbar .navbar-menu .navbar-item,
     .location ul,
     .contact ul,
     .layanan ul {
